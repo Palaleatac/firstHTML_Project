@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: Poppins;
+}
+
+h1 {
+  font-family: Poppins;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 50px;
+  leading-trim: NONE;
+  line-height: 54px;
+  letter-spacing: 0%;
+}
+h2 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  leading-trim: NONE;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+p {
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 26px;
+  letter-spacing: 0%;
+}
+button {
+  background-color: rgba(247, 208, 71, 1);
+}
+.form_page {
+  max-width: 1440px;
+  padding: 0 135px;
+  margin: auto;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-top-bottom {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  flex-direction: column;
+}

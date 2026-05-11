@@ -1,0 +1,83 @@
+#a1 {
+  height: 986px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  background-color: #005461;
+}
+#a1 h1 {
+  font-family: Poppins;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 50px;
+  leading-trim: NONE;
+  line-height: 54px;
+  color: rgba(255, 255, 255, 1);
+  display: block;
+  margin-top: 140px;
+  margin-bottom: 100px;
+}
+#box-a1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  position: relative;
+  gap: 50px;
+}
+.mini_box {
+  width: 300px;
+  height: 216px;
+}
+.img-a {
+  width: 70px;
+  height: 70px;
+  background: rgba(1, 130, 148, 1);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini_box h2 {
+  font-family: Poppins;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  leading-trim: NONE;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: rgba(255, 255, 255, 1);
+  margin: 30px 0 14px 0;
+}
+.mini_box p {
+  color: rgba(255, 255, 255, 1);
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 26px;
+  letter-spacing: 0%;
+}
+#box-a1 hr {
+  position: absolute;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#hr1 {
+  width: 1px;
+  height: 100%;
+  left: calc(300px + 20px);
+}
+
+#hr2 {
+  width: 1px;
+  height: 100%;
+  left: calc((300px + 40px) * 2 - 20px);
+}
+#hr3 {
+  height: 1px;
+  width: 100%;
+  top: 50%;
+}
