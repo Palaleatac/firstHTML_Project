@@ -1,0 +1,133 @@
+/* ====================================================== */
+/* 🎮 CONTROL PANEL – CHỈ SỬA Ở ĐÂY */
+/* ====================================================== */
+
+:root {
+  /* 🎨 ===== MÀU ===== */
+  --btn-main: #2388e0; /* màu nền khi hover */
+  --btn-text: #ffffff; /* màu chữ */
+  --btn-hover-text: rgb(214, 166, 166); /* màu chữ khi hover */
+  --btn-border: #ffffff; /* màu viền ngoài */
+  --btn-inner: #dae719; /* màu nền trong nút */
+  --btn-bg: #fefefe; /* màu nền khối chứa */
+  --line-color: #27282c; /* màu thanh trên/dưới */
+
+  /* 📏 ===== SIZE NÚT ===== */
+  --btn-font: 1.5em; /* size chữ */
+  --btn-py: 10px; /* chiều cao nút */
+  --btn-px: 30px; /* chiều rộng nút */
+  --btn-spacing: 0.1em; /* khoảng cách chữ */
+  --btn-spacing-hover: 0.25em; /* khoảng cách chữ khi hover */
+
+  /* 📦 ===== SIZE KHỐI ===== */
+  --wrap-width: 100%; /* chiều rộng khối */
+  --wrap-height: 50px; /* chiều cao khối */
+
+  /* ⚡ ===== EFFECT ===== */
+  --btn-speed: 1s; /* tốc độ animation */
+  --btn-glow: 35px; /* độ phát sáng */
+
+  /* ✨ ===== THANH TRANG TRÍ ===== */
+  --line-width: 10px; /* độ dài thanh */
+  --line-height: 4px; /* độ dày thanh */
+  --line-width-hover: 20px; /* độ dài khi hover */
+
+  --line-top-start: 80%; /* vị trí thanh trên ban đầu */
+  --line-top-end: 20%; /* vị trí thanh trên khi hover */
+
+  --line-bottom-start: 20%; /* vị trí thanh dưới ban đầu */
+  --line-bottom-end: 80%; /* vị trí thanh dưới khi hover */
+}
+/* code tự sửa */
+
+/* ====================================================== */
+/* 🧱 ENGINE – KHÔNG SỬA */
+/* ====================================================== */
+
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--wrap-width);
+  height: var(--wrap-height);
+
+  background: var(--btn-bg);
+}
+
+.btn {
+  position: relative;
+
+  background: var(--btn-border);
+  color: var(--btn-text);
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-size: var(--btn-font);
+  letter-spacing: var(--btn-spacing);
+
+  padding: var(--btn-py) var(--btn-px);
+
+  transition: var(--btn-speed);
+}
+
+.btn:hover {
+  background: var(--btn-main);
+  color: var(--btn-hover-text);
+  letter-spacing: var(--btn-spacing-hover);
+  box-shadow: 0 0 var(--btn-glow) var(--btn-main);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: var(--btn-inner);
+}
+
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn i {
+  position: absolute;
+  inset: 0;
+}
+
+.btn i::before,
+.btn i::after {
+  content: "";
+  position: absolute;
+
+  width: var(--line-width);
+  height: var(--line-height);
+
+  background: var(--line-color);
+
+  transition: var(--btn-speed);
+  transform: translateX(-50%) skewX(325deg);
+}
+
+/* thanh trên */
+.btn i::before {
+  top: 0;
+  left: var(--line-top-start);
+}
+
+.btn:hover i::before {
+  width: var(--line-width-hover);
+  left: var(--line-top-end);
+}
+
+/* thanh dưới */
+.btn i::after {
+  bottom: 0;
+  left: var(--line-bottom-start);
+}
+
+.btn:hover i::after {
+  width: var(--line-width-hover);
+  left: var(--line-bottom-end);
+}
