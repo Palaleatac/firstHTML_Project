@@ -3,131 +3,140 @@
 /* ====================================================== */
 
 :root {
-  /* 🎨 ===== MÀU ===== */
-  --btn-main: #2388e0; /* màu nền khi hover */
-  --btn-text: #ffffff; /* màu chữ */
-  --btn-hover-text: rgb(214, 166, 166); /* màu chữ khi hover */
-  --btn-border: #ffffff; /* màu viền ngoài */
-  --btn-inner: #dae719; /* màu nền trong nút */
-  --btn-bg: #fefefe; /* màu nền khối chứa */
-  --line-color: #27282c; /* màu thanh trên/dưới */
+  /* 🎨 ===== MÀU (đổi giao diện) ===== */
+  --btn-main-BR2: #2388e0; /* màu nền khi hover */
+  --btn-text-BR2: #ffffff; /* màu chữ */
+  --btn-hover-text-BR2: rgb(214, 166, 166); /* màu chữ khi hover */
+  --btn-border-BR2: #ffffff; /* màu viền ngoài */
+  --btn-inner-BR2: #dae719; /* nền bên trong nút */
+  --btn-bg-BR2: #fefefe; /* nền khối chứa */
+  --line-color-BR2: #27282c; /* màu thanh trên/dưới */
 
-  /* 📏 ===== SIZE NÚT ===== */
-  --btn-font: 1.5em; /* size chữ */
-  --btn-py: 10px; /* chiều cao nút */
-  --btn-px: 30px; /* chiều rộng nút */
-  --btn-spacing: 0.1em; /* khoảng cách chữ */
-  --btn-spacing-hover: 0.25em; /* khoảng cách chữ khi hover */
+  /* 📏 ===== SIZE NÚT (to / nhỏ button) ===== */
+  --btn-font-BR2: 1.5em; /* size chữ */
+  --btn-py-BR2: 10px; /* chiều cao nút */
+  --btn-px-BR2: 30px; /* chiều rộng nút */
+  --btn-spacing-BR2: 0.1em; /* khoảng cách chữ */
+  --btn-spacing-hover-BR2: 0.25em; /* spacing khi hover */
 
-  /* 📦 ===== SIZE KHỐI ===== */
-  --wrap-width: 100%; /* chiều rộng khối */
-  --wrap-height: 50px; /* chiều cao khối */
+  /* 📦 ===== SIZE KHỐI (vùng chứa button) ===== */
+  --wrap-width-BR2: 100%; /* chiều rộng khối */
+  --wrap-height-BR2: 200px; /* chiều cao khối */
 
-  /* ⚡ ===== EFFECT ===== */
-  --btn-speed: 1s; /* tốc độ animation */
-  --btn-glow: 35px; /* độ phát sáng */
+  /* ⚡ ===== HIỆU ỨNG ===== */
+  --btn-speed-BR2: 1s; /* tốc độ animation */
+  --btn-glow-BR2: 35px; /* độ phát sáng */
 
   /* ✨ ===== THANH TRANG TRÍ ===== */
-  --line-width: 10px; /* độ dài thanh */
-  --line-height: 4px; /* độ dày thanh */
-  --line-width-hover: 20px; /* độ dài khi hover */
+  --line-width-BR2: 10px; /* độ dài thanh */
+  --line-height-BR2: 4px; /* độ dày thanh */
+  --line-width-hover-BR2: 20px; /* độ dài khi hover */
 
-  --line-top-start: 80%; /* vị trí thanh trên ban đầu */
-  --line-top-end: 20%; /* vị trí thanh trên khi hover */
+  --line-top-start-BR2: 80%; /* vị trí thanh trên ban đầu */
+  --line-top-end-BR2: 20%; /* vị trí thanh trên khi hover */
 
-  --line-bottom-start: 20%; /* vị trí thanh dưới ban đầu */
-  --line-bottom-end: 80%; /* vị trí thanh dưới khi hover */
+  --line-bottom-start-BR2: 20%; /* vị trí thanh dưới ban đầu */
+  --line-bottom-end-BR2: 80%; /* vị trí thanh dưới khi hover */
+
+  /* 🟣 ===== BO GÓC ===== */
+  --btn-radius-BR2: 10px; /* bo góc ngoài */
+  --btn-inner-radius-BR2: 8px; /* bo góc lớp trong */
+
+  /* 📍 ===== VỊ TRÍ BUTTON ===== */
+  --btn-align-x-BR2: center; /* left | center | right */
+  --btn-align-y-BR2: center; /* top | center | bottom */
 }
-/* code tự sửa */
 
 /* ====================================================== */
 /* 🧱 ENGINE – KHÔNG SỬA */
 /* ====================================================== */
 
-.btn-wrap {
+.BR2_btn_box {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: var(--btn-align-x-BR2);
+  align-items: var(--btn-align-y-BR2);
 
-  width: var(--wrap-width);
-  height: var(--wrap-height);
+  width: var(--wrap-width-BR2);
+  height: var(--wrap-height-BR2);
 
-  background: var(--btn-bg);
+  background: var(--btn-bg-BR2);
 }
 
-.btn {
+.BR2_btn {
   position: relative;
 
-  background: var(--btn-border);
-  color: var(--btn-text);
+  background: var(--btn-border-BR2);
+  color: var(--btn-text-BR2);
+
+  border-radius: var(--btn-radius-BR2);
 
   text-decoration: none;
   text-transform: uppercase;
 
-  font-size: var(--btn-font);
-  letter-spacing: var(--btn-spacing);
+  font-size: var(--btn-font-BR2);
+  letter-spacing: var(--btn-spacing-BR2);
 
-  padding: var(--btn-py) var(--btn-px);
+  padding: var(--btn-py-BR2) var(--btn-px-BR2);
 
-  transition: var(--btn-speed);
+  transition: var(--btn-speed-BR2);
 }
 
-.btn:hover {
-  background: var(--btn-main);
-  color: var(--btn-hover-text);
-  letter-spacing: var(--btn-spacing-hover);
-  box-shadow: 0 0 var(--btn-glow) var(--btn-main);
+.BR2_btn:hover {
+  background: var(--btn-main-BR2);
+  color: var(--btn-hover-text-BR2);
+  letter-spacing: var(--btn-spacing-hover-BR2);
+  box-shadow: 0 0 var(--btn-glow-BR2) var(--btn-main-BR2);
 }
 
-.btn::before {
+.BR2_btn::before {
   content: "";
   position: absolute;
   inset: 2px;
-  background: var(--btn-inner);
+
+  background: var(--btn-inner-BR2);
+  border-radius: var(--btn-inner-radius-BR2);
 }
 
-.btn span {
+.BR2_btn span {
   position: relative;
   z-index: 1;
 }
 
-.btn i {
+.BR2_btn i {
   position: absolute;
   inset: 0;
 }
 
-.btn i::before,
-.btn i::after {
+.BR2_btn i::before,
+.BR2_btn i::after {
   content: "";
   position: absolute;
 
-  width: var(--line-width);
-  height: var(--line-height);
+  width: var(--line-width-BR2);
+  height: var(--line-height-BR2);
 
-  background: var(--line-color);
+  background: var(--line-color-BR2);
 
-  transition: var(--btn-speed);
+  transition: var(--btn-speed-BR2);
   transform: translateX(-50%) skewX(325deg);
 }
 
-/* thanh trên */
-.btn i::before {
+.BR2_btn i::before {
   top: 0;
-  left: var(--line-top-start);
+  left: var(--line-top-start-BR2);
 }
 
-.btn:hover i::before {
-  width: var(--line-width-hover);
-  left: var(--line-top-end);
+.BR2_btn:hover i::before {
+  width: var(--line-width-hover-BR2);
+  left: var(--line-top-end-BR2);
 }
 
-/* thanh dưới */
-.btn i::after {
+.BR2_btn i::after {
   bottom: 0;
-  left: var(--line-bottom-start);
+  left: var(--line-bottom-start-BR2);
 }
 
-.btn:hover i::after {
-  width: var(--line-width-hover);
-  left: var(--line-bottom-end);
+.BR2_btn:hover i::after {
+  width: var(--line-width-hover-BR2);
+  left: var(--line-bottom-end-BR2);
 }
